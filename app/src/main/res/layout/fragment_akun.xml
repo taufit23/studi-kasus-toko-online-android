@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.AkunFragment">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:autoText="true"
+        android:background="@drawable/img_fjords"
+        android:clickable="true"
+        android:drawingCacheQuality="high"
+        android:fadingEdge="vertical"
+        android:focusable="true"
+        android:imeOptions="flagNoAccessoryAction|flagNoFullscreen|actionGo"
+        android:lineSpacingExtra="8sp"
+        android:text="@string/textview"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#FF0404"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        app:drawableTintMode="screen" />
+</FrameLayout>
