@@ -9,4 +9,5 @@
     <string name="home">Home</string>
     <string name="textview">TextView</string>
     <string name="todo">TODO</string>
+    <string name="icon_search_home">icon search home</string>
 </resources>

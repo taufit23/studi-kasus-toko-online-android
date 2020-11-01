@@ -1,12 +1,10 @@
 package com.example.studikasustokoonline
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
 import com.example.studikasustokoonline.fragment.AkunFragment
 import com.example.studikasustokoonline.fragment.HomeFragment
@@ -33,19 +31,20 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun setUpBottomNav(){
+    fun setUpBottomNav() {
         fm.beginTransaction().add(R.id.container, fragmentHome).show(fragmentHome).commit()
-        fm.beginTransaction().add(R.id.container, FragmentKeranjang).hide(FragmentKeranjang).commit()
+        fm.beginTransaction().add(R.id.container, FragmentKeranjang).hide(FragmentKeranjang)
+            .commit()
         fm.beginTransaction().add(R.id.container, fragmentAkun).hide(fragmentAkun).commit()
 
         bottomNavigationView = findViewById(R.id.nav_view)
-        menu= bottomNavigationView.menu
+        menu = bottomNavigationView.menu
         menuitem = menu.getItem(0)
-        menuitem.isChecked= true
+        menuitem.isChecked = true
 
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
 
-            when(item.itemId) {
+            when (item.itemId) {
                 R.id.navigation_home -> {
                     calfragment(0, fragmentHome)
                 }
@@ -60,10 +59,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun calfragment(int: Int, fragment: Fragment){
+    fun calfragment(int: Int, fragment: Fragment) {
         menuitem = menu.getItem(int)
-        menuitem.isChecked= true
+        menuitem.isChecked = true
         fm.beginTransaction().hide(active).show(fragment).commit()
-        active= fragment
+        active = fragment
     }
 }
