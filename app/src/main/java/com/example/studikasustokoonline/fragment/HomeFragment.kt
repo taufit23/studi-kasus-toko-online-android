@@ -52,6 +52,21 @@ class HomeFragment : Fragment() {
         p1.harga = "Rp. 6.800.000"
         p1.gambar = R.drawable.slide2
 
+        val p2= Produk()
+        p2.nama = "HP core I7 8GbRam"
+        p2.harga = "Rp. 8.500.000"
+        p2.gambar = R.drawable.hp_14_bs749tu
+
+        val p3= Produk()
+        p3.nama = "HP core I3 4GbRam"
+        p3.harga = "Rp. 3.900.000"
+        p3.gambar = R.drawable.hp_envy_13_aq0019tx
+
+        arr.add(p1)
+        arr.add(p2)
+        arr.add(p3)
+
+
 
         return arr
     }
