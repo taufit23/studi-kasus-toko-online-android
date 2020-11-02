@@ -10,4 +10,8 @@
     <string name="textview">TextView</string>
     <string name="todo">TODO</string>
     <string name="icon_search_home">icon search home</string>
+    <string name="cari_product_disini">Cari product disini...</string>
+     <string name="todo">TODO</string>
+    <string name="tombol_chat" />
+    <string name="sedang_diskon">Sedang Diskon</string>
 </resources>

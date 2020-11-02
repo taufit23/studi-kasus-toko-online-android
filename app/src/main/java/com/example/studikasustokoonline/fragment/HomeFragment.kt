@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
 import com.example.studikasustokoonline.R
+import com.example.studikasustokoonline.model.Produk
 import com.inyongtisto.tutorial.adapter.AdapterSlider
+import kotlinx.android.synthetic.main.item_slider.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -41,8 +43,17 @@ class HomeFragment : Fragment() {
 
         val adapterSlider = AdapterSlider(arrSlider, activity)
         vpSlider.adapter = adapterSlider
-
         return view
+    }
+    val arrProduk: ArrayList<Produk>get(){
+        val arr = ArrayList<Produk>()
+        val p1= Produk()
+        p1.nama = "HP core I5 8GbRam"
+        p1.harga = "Rp. 6.800.000"
+        p1.gambar = R.drawable.slide2
+
+
+        return arr
     }
 
 

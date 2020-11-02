@@ -46,6 +46,7 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.android.support:support-annotations:28.0.0'
     testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
@@ -55,5 +56,7 @@ dependencies {
     //noinspection GradleCompatible,GradleCompatible
     implementation 'com.android.support:cardview-v7:29.0.0'
 
-
+//  recicle view
+    //noinspection GradleCompatible,GradleCompatible
+    implementation 'com.android.support:reciclerview-v7:29.0.0'
 }
