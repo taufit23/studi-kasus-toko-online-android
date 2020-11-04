@@ -5,8 +5,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.studikasustokoonline.R
+import com.example.studikasustokoonline.model.Produk
+import java.util.ArrayList
 
-class AdapterProduk: RecyclerView.Adapter<AdapterProduk.Holder>() {
+class AdapterProduk(var data:ArrayList<Produk>) : RecyclerView.Adapter<AdapterProduk.Holder>() {
     class Holder(view: View):RecyclerView.ViewHolder(view)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
@@ -15,10 +17,10 @@ class AdapterProduk: RecyclerView.Adapter<AdapterProduk.Holder>() {
     }
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
-        TODO("Not yet implemented")
+
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return data.size
     }
 }

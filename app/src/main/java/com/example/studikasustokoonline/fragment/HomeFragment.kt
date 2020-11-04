@@ -5,8 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.ViewPager
 import com.example.studikasustokoonline.R
+import com.example.studikasustokoonline.adapter.AdapterProduk
 import com.example.studikasustokoonline.model.Produk
 import com.inyongtisto.tutorial.adapter.AdapterSlider
 import kotlinx.android.synthetic.main.item_slider.*
@@ -25,14 +28,17 @@ class HomeFragment : Fragment() {
     // TODO: Rename and change types of parameters
 
     lateinit var vpSlider: ViewPager
+    lateinit var rvProduk: RecyclerView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view: View = inflater.inflate(R.layout.fragment_home, container, false)
-
         vpSlider = view.findViewById(R.id.vp_slider)
+
+        rvProduk = view.findViewById(R.id.rv_produk)
+
         val arrSlider = ArrayList<Int>()
         arrSlider.add(R.drawable.slide1)
         arrSlider.add(R.drawable.slide2)
@@ -43,6 +49,12 @@ class HomeFragment : Fragment() {
 
         val adapterSlider = AdapterSlider(arrSlider, activity)
         vpSlider.adapter = adapterSlider
+
+        val layoutManager = LinearLayoutManager(activity)
+        layoutManager.orientation = LinearLayoutManager.HORIZONTAL
+        rvProduk.adapter = AdapterProduk(this.arrProduk)
+        rvProduk.layoutManager = layoutManager
+
         return view
     }
     val arrProduk: ArrayList<Produk>get(){
